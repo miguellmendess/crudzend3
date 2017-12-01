@@ -1,0 +1,14 @@
+<?php $this->headTitle("alface");?>
+
+<h1> Atirei o pau no gato</h1>
+
+
+<?php foreach ($servicos as $servico) :
+?>
+<?php echo $this->escapeHtml($servico->id); ?>
+
+<?php echo $this->escapeHtml($servico->nome); ?>
+<br>
+<?php
+endforeach;
+?>
