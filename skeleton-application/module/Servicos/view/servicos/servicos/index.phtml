@@ -1,14 +1,227 @@
-<?php $this->headTitle("alface");?>
+<?php /*$this->headTitle("alface");?>
 
 <h1> Atirei o pau no gato</h1>
 
 
-<?php foreach ($servicos as $servico) :
+
+*/
+ foreach ($servicos as $servico) :
 ?>
 <?php echo $this->escapeHtml($servico->id); ?>
 
 <?php echo $this->escapeHtml($servico->nome); ?>
-<br>
 <?php
-endforeach;
+ endforeach;
+ die('<br><hr>DIE NA VIEW');
 ?>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="" style="border-bottom: 1px solid #d6d6d6; margin-bottom: 1%;">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 tituloCont" style="border:0px" >
+				<div class="searchDiv">
+					<input type="text" class = "searchInicial" name="" > 
+					<img src="img/icons/search-icon.png" style="margin-left: 1%;width:26px; ">
+				</div>
+				<!-- <a class="btn btn-primary btn-lg" href="http://getbootstrap.com.br/v4/examples/jumbotron/#" role="button">Learn more »</a>-->
+			</div>
+
+		</div>
+		<div class="row">
+
+			<div class="col-md-6 " style="border-right: 1px solid">
+				<div class ="botton acessarPaginaBotton " style="width: 200px; font-size: 13px; cursor: pointer"> Próximos à sua localização</div>Ou Filtre
+				<div>
+					<select style="width: 100px">
+						<option> Estado</option>
+						<option> Santa Catarina</option>
+						<option> Paraná</option>
+						<option> São Paulo</option>
+						<option> Maranhão</option>
+					</select>
+					<select>
+						<option> Cidade</option>
+						<option> São José</option>
+						<option> asd</option>
+						<option> asd</option>
+						<option> asd</option>
+					</select>
+					<select>
+						<option> Bairro</option>
+						<option> asd</option>
+						<option> asd</option>
+						<option> asd</option>
+						<option> asd</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col-md-6" >
+				<div style="background-color: black;color: white; padding: 20px 20px 20px 20px">FILTRO POR CATEGORIAS</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div id="mapa" class="search" style="height: 300px; width: 100%">
+</div>
+
+
+<!-- Maps API Javascript -->
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAZKhzviR27byUBmZTb1I9bDi07GFC1wHc"></script>
+
+<!-- Arquivo de inicialização do mapa -->
+
+<script src="js/mapa.js"></script>
+
+
+<div class="container">
+	<!-- Example row of columns -->
+	<div class="row">
+		<div class="col-md-3">
+			<div class="conteudo">
+				<div class="infoDesc">mais usado</div>
+				<div class="team-section-grid animate-box">
+					<div class="logoConteudo">
+						<img src="https://refrigerantespureza.com.br/wp-content/themes/pureza/data/works/10_big.jpg" class="imgCont">
+					</div>
+					<div class="tituloCont">Pureza</div>
+
+					<p class="descricaoIni">Desde 1905 a Pureza® se faz presente no nosso dia a dia. Refrigerante preferido há mais de um século, naturalmente irresistível e insubstituível! xxxx</p>
+					<p>
+						<img src="img/aval/30.png" style="width: 80px">3.0 (7.142 avaliações)
+						<a class="btn btn-secondary" href="http://getbootstrap.com.br/v4/examples/jumbotron/#" role="button">View details »</a></p>
+						<div class="overlay-section">
+							<div class="desc">
+								<h3>Pureza</h3>
+								<span>Bebidas e zaz</span>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+								<p>#bolo #refresco #agilidade #gostoso #felicidade</p>
+								<img src="img/icons/facebook-icon.png" style="width: 30px">
+								<img src="img/icons/instagram-icon.png" style="width: 30px">
+								<img src="img/icons/Whatsapp-icon.png" style="width: 30px">
+								<img src="img/icons/telefone-icon.png" style="width: 30px">
+								<div class ="botton mapaBotton" style=""><img src="img/icons/mapa-icon.png" style="width: 20px;">VEJA NO MAPA</div>
+								<div class ="botton acessarPaginaBotton">Acesse à Página</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-3">
+				<div class="conteudo">
+					<div class="infoDesc">mais usado</div>
+					<div class="team-section-grid animate-box">
+						<div class="logoConteudo">
+							<img src="http://faracocontabilidade.com/images/login/logo.png" class="imgCont">
+						</div>
+						<div class="tituloCont">Faraco Contabilidade</div>
+
+						<p class="descricaoIni">Confiabilidade, agilidade nos processos. Conheça a Faraco Contabilidade. </p>
+						<p>
+							<img src="img/aval/45.png" style="width: 80px">4.3 (1.121 avaliações)
+							<a class="btn btn-secondary" href="http://getbootstrap.com.br/v4/examples/jumbotron/#" role="button">View details »</a></p>
+							<div class="overlay-section">
+								<div class="desc">
+									<h3>Faraco Contabilidade</h3>
+									<span>Escritorio Contabil</span>
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+									<p>#bolo #refresco #agilidade #gostoso #felicidade</p>
+									<img src="img/icons/facebook-icon.png" style="width: 30px">
+									<img src="img/icons/instagram-icon.png" style="width: 30px">
+									<img src="img/icons/Whatsapp-icon.png" style="width: 30px">
+									<img src="img/icons/telefone-icon.png" style="width: 30px">
+									<div class ="botton mapaBotton" style=""><img src="img/icons/mapa-icon.png" style="width: 20px;">VEJA NO MAPA</div>
+									<div class ="botton acessarPaginaBotton">Acesse à Página</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="conteudo">
+						<div class="infoDesc">mais usado</div>
+						<div class="team-section-grid animate-box">
+							<div class="logoConteudo">
+								<img src="http://www.escolacontemporanea.mus.br/wordpress/wp-content/uploads/2014/01/logo-300x68.png" class="imgCont">
+							</div>
+							<div class="tituloCont">Escola de Música Ademar</div>
+
+							<p class="descricaoIni">Aprendizado dedicação ticarica alfafa e picles. </p>
+							<p>
+								<img src="img/aval/45.png" style="width: 80px">4.3 (1.121 avaliações)
+								<a class="btn btn-secondary" href="http://getbootstrap.com.br/v4/examples/jumbotron/#" role="button">View details »</a></p>
+								<div class="overlay-section">
+									<div class="desc">
+										<h3>Faraco Contabilidade</h3>
+										<span>Escritorio Contabil</span>
+										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+										<p>#bolo #refresco #agilidade #gostoso #felicidade</p>
+										<img src="img/icons/facebook-icon.png" style="width: 30px">
+										<img src="img/icons/instagram-icon.png" style="width: 30px">
+										<img src="img/icons/Whatsapp-icon.png" style="width: 30px">
+										<img src="img/icons/telefone-icon.png" style="width: 30px">
+										<div class ="botton mapaBotton" style=""><img src="img/icons/mapa-icon.png" style="width: 20px;">VEJA NO MAPA</div>
+										<div class ="botton acessarPaginaBotton">Acesse à Página</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="conteudo">
+							<div class="infoDesc">mais usado</div>
+							<div class="team-section-grid animate-box">
+								<div class="logoConteudo">
+									<img src="https://i1.wp.com/marmorealmg.com.br/wp-content/uploads/2017/04/cropped-Logo_Transp_003.png?w=1386" class="imgCont">
+								</div>
+								<div class="tituloCont">Marmoraria Schevecneko</div>
+
+								<p class="descricaoIni">Nois gosta mesmo e de marmore, pq marmore é tope demais</p>
+								<p>
+									<img src="img/aval/45.png" style="width: 80px">4.3 (1.121 avaliações)
+									<a class="btn btn-secondary" href="http://getbootstrap.com.br/v4/examples/jumbotron/#" role="button">View details »</a></p>
+									<div class="overlay-section">
+										<div class="desc">
+											<h3>Marmoraria Schevecneko</h3>
+											<span>Industria de marmore</span>
+											<p>Alpista e zaz jdjdjd ticarica</p>
+											<p>#bolo #refresco #agilidade #gostoso #felicidade</p>
+											<img src="img/icons/facebook-icon.png" style="width: 30px">
+											<img src="img/icons/instagram-icon.png" style="width: 30px">
+											<img src="img/icons/Whatsapp-icon.png" style="width: 30px">
+											<img src="img/icons/telefone-icon.png" style="width: 30px">
+											<div class ="botton mapaBotton" style=""><img src="img/icons/mapa-icon.png" style="width: 20px;">VEJA NO MAPA</div>
+											<div class ="botton acessarPaginaBotton">Acesse à Página</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<hr>
+
+					<footer>
+						<p>© Company 2016</p>
+					</footer>
+				</div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    	================================================== -->
+    	<!-- Placed at the end of the document so the pages load faster -->
+    	<script src="./bootstrap_files/jquery.min.js.download" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    	<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    	<script src="./bootstrap_files/tether.min.js.download" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    	<script src="./bootstrap_files/bootstrap.min.js.download"></script>
+    	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    	<script src="./bootstrap_files/ie10-viewport-bug-workaround.js.download"></script>
+

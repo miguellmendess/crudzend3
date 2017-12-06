@@ -33,7 +33,7 @@ class Module implements ConfigProviderInterface
 					$resultSetPrototype->setArrayObjectPrototype(new Model\Servico());
 
 					//Passa como parametro o nome da tabela
-					return new TableGateway('servico', $dbAdapter, null, $resultSetPrototype);
+					return new TableGateway('tiposervico', $dbAdapter, null, $resultSetPrototype);
 
 				}
 			]

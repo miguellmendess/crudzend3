@@ -1,55 +1,135 @@
 <?= $this->doctype() ?>
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <?= $this->headTitle('ZF Skeleton Application')->setSeparator(' - ')->setAutoEscape(false) ?>
+<head>
+    <meta charset="utf-8">
+    <?= $this->headTitle('ZF Skeleton Application')->setSeparator(' - ')->setAutoEscape(false) ?>
 
-        <?= $this->headMeta()
-            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
-            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
-        ?>
+    <?= $this->headMeta()
+    ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+    ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+    ?>
 
-        <!-- Le styles -->
-        <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
-            ->prependStylesheet($this->basePath('css/style.css'))
-            ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
-            ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
-        ?>
+    <!-- Le styles -->
+    <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
+    ->prependStylesheet($this->basePath('css/style.css'))
+    ->prependStylesheet($this->basePath('css/plugin.css'))
+    ->prependStylesheet($this->basePath('css/estilo.css'))
+    ->prependStylesheet($this->basePath('css/bootstrap-theme.min.css'))
+    ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
+    ?>
 
-        <!-- Scripts -->
-        <?= $this->headScript()
-            ->prependFile($this->basePath('js/bootstrap.min.js'))
-            ->prependFile($this->basePath('js/jquery-3.1.0.min.js'))
-        ?>
-    </head>
-    <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="<?= $this->url('home') ?>">
-                        <img src="<?= $this->basePath('img/zf-logo-mark.svg') ?>" height="28" alt="Zend Framework <?= \Application\Module::VERSION ?>"/>&nbsp;Skeleton Application
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="<?= $this->url('home') ?>">Home</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container">
-            <?= $this->content ?>
-            <hr>
-            <footer>
-                <p>&copy; 2005 - <?= date('Y') ?> by Zend Technologies Ltd. All rights reserved.</p>
-            </footer>
-        </div>
-        <?= $this->inlineScript() ?>
-    </body>
+    <!-- Custom styles for this template -->
+    <style type="text/css">
+    .conteudo{
+        cursor: pointer;
+        margin-top: 10px;
+
+        border-color: #b2b2b2;
+        -webkit-box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.75);
+        box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.75);
+    }
+    .conteudo:hover{
+        -webkit-box-shadow: 1px 24px 44px -9px rgba(0,0,0,0.75);
+        -moz-box-shadow: 1px 24px 44px -9px rgba(0,0,0,0.75);
+        box-shadow: 1px 24px 44px -9px rgba(0,0,0,0.75);
+        margin-top: 0px;
+    }
+    .logoConteudo{
+        width: 100%;
+        background-color: #ffffff;
+        border-bottom: 1px solid;
+        border-color: #b2b2b2;
+    }
+    .imgCont{
+        width: 100% ; 
+        height: 150px;
+        border:1px solid;
+    }
+    .tituloCont{
+        padding: 10px 10px 10px 10px;
+        font-size: 16px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        border-bottom: 1px solid #b2b2b2;
+    }
+    .descricaoIni{
+        padding: 20px 20px 20px 20px;
+    }
+    .infoDesc{
+        color: #ffffff;
+        padding: 2px 0px 1px 8px;
+        background-color: red;
+        width: 40%;
+        border-top-right-radius: 10px;
+    }
+    .botton{
+        font-size: 10px;
+        width: 70%;
+        padding: 5px 5px 5px 5px;
+        border-radius: 10px;
+
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        margin-top: 5%;
+    }
+    .acessarPaginaBotton{
+        background-color: #030570;
+        color: #ffffff;
+
+    }
+    .mapaBotton{
+        background-color: red;
+        color: #ffffff;
+    }
+    .searchInicial{
+        border: 0px;
+        width: 80%;
+        height: 45px;
+        padding: 20px 20px 20px 20px;
+    }
+    .searchInicial:focus {
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+    } 
+    .searchDiv{
+        padding: 0px 0px 0px 0px;
+        border:1px solid;
+        width: 60%;
+        height: 50px;
+        margin-bottom: 2%;
+        border-color: #b2b2b2;
+        -webkit-box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.75);
+        box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.75);
+    }
+    .search{
+
+
+    }
+</style>
+
+
+<!-- Scripts -->
+<?= $this->headScript()
+->prependFile($this->basePath('js/bootstrap.min.js'))
+->prependFile($this->basePath('js/jquery-3.1.0.min.js'))
+->prependFile($this->basePath('js/jquery.min.js'))
+->prependFile($this->basePath('js/infobox.js'))
+->prependFile($this->basePath('js/markerclusterer.js'))
+?>
+</head>
+<body>
+    <?= $this->content ?>        
+</body>
 </html>

@@ -19,10 +19,12 @@ class ServicosController extends AbstractActionController
 	public function indexAction(){
 		
 		$servicoTable = $this->table;
-
+		$servicos =  $servicoTable->findByPartialName("Aluguel");
+		$servicos =  $servicoTable->fetchAll();
+		
 
 		return new ViewModel([
-			'servicos'=>$servicoTable->fetchAll()
+			'servicos'=>$servicos
 		]);
 
 	}
