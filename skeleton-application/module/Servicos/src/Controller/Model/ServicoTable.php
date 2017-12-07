@@ -22,12 +22,12 @@ class ServicoTable
 	public function findByPartialName($name)
 	{
 
-		return $this->tableGateway->select(['nome'=>$name]);	
 		// $select = $this->tableGateway->select()->from('servico')
 		// ->where('name like ?', "%{$name}%")
 		// ->order('name ASC');
 
-		// return $this->fetchAll($select); 
+		// return $this->fetchAll($select);
+		return $this->tableGateway->select(['nome'=>$name]);	 
 	}
 
 
